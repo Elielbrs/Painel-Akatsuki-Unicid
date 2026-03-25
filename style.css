@@ -9,7 +9,7 @@
     --akatsuki-black: #0a0a0a;
     --akatsuki-dark-gray: #1a1a1a;
     --akatsuki-gray: #3a3a3a;
-    --akatsuki-light: #E8E8E8;
+    --akatsuki-light: #E8E8E8; 
     --akatsuki-white: #FFFFFF;
     
     /* Cores Secundárias */
@@ -431,6 +431,15 @@ footer {
         width: 100%; /* Card ocupa a largura disponível no grid */
         max-width: 300px;
     }
+
+    body {
+        background-attachment: scroll; /* Evita problemas de performance em mobile */
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
 }
 
 /* 4. MOBILE (Até 480px) */
@@ -452,8 +461,10 @@ footer {
         font-size: 1.1rem;
     }
     .membro-card {
-        max-width: 280px;
+        max-width: 250px;
     }
+
+
 }
 
 @keyframes moverimg {
