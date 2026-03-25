@@ -12,10 +12,11 @@
             <nav>
                 <ul>
                     <li><a href="#membros">Membros</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#marcos">Marcos</a></li>
-                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#origem">Origem</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#duplas">Duplas</a></li>
                     <li><a href="#wallpapers">Wallpapers</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,120 +40,197 @@
                 <p>A Akatsuki é composta por um grupo de ninjas renegados, cada um com habilidades únicas e especializadas sob a liderança de Pain.</p>
             </div>
 
+            <div class="filtros">
+                <button class="btn-filtro" onclick="filtrarMembros('todos')">Todos</button>
+                <button class="btn-filtro" onclick="filtrarMembros('uchiha')">Uchiha</button>
+                <button class="btn-filtro" onclick="filtrarMembros('imortal')">Imortais</button>
+                <button class="btn-filtro" onclick="filtrarMembros('espadachim')">Espadachins</button>
+            </div>
+
             <div class="membros-container">
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Itachi Uchiha</h3>
-                        <span class="membro-titulo">O Gênio Uchiha</span>
+                <div class="membro-card" data-tipo="uchiha">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Itachi Uchiha</h3>
+                                <span class="membro-titulo">O Gênio Uchiha</span>
+                            </div>
+                            <img src="./assets/img/Itachi.png" alt="Itachi" class="membro-img">
+                            <p class="membro-desc">Mestre em Genjutsu e portador do Mangekyō Sharingan.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Folha 🍃</p>
+                                <p><strong>Anel:</strong> Shu (Vermelho) 💍</p>
+                                <p><strong>Jutsus:</strong> Amaterasu, Tsukuyomi, Susano'o</p>
+                                <p class="ficha-desc">Procurado pelo massacre do clã Uchiha.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Itachi.png" alt="Itachi Uchiha" class="membro-img">
-                    <p class="membro-desc">Um dos membros mais poderosos da Akatsuki, conhecido por seu Sharingan avançado e domínio do Genjutsu. Itachi possui inteligência estratégica incomparável.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Madara Uchiha</h3>
-                        <span class="membro-titulo">O Lendário Guerreiro</span>
+                <div class="membro-card" data-tipo="uchiha">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Madara Uchiha</h3>
+                                <span class="membro-titulo">O Lendário Guerreiro</span>
+                            </div>
+                            <img src="./assets/img/Madara.png" alt="Madara" class="membro-img">
+                            <p class="membro-desc">Fundador da Folha e o ninja mais poderoso de sua era.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Folha 🍃</p>
+                                <p><strong>Kekkei Genkai:</strong> Rinnegan / Sharingan</p>
+                                <p><strong>Jutsus:</strong> Tengai Shinsei, Limbo, Susano'o Perfeito</p>
+                                <p class="ficha-desc">Mentor do Plano Olho da Lua.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Madara.png" alt="Madara Uchiha" class="membro-img">
-                    <p class="membro-desc">Fundador do clã Uchiha, Madara é uma força da natureza com poder bruto incomparável. Seu Mangekyo Sharingan revela habilidades devastadoras.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Tobi (Obito)</h3>
-                        <span class="membro-titulo">O Mascarado Enigmático</span>
+                <div class="membro-card" data-tipo="imortal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Pain (Nagato)</h3>
+                                <span class="membro-titulo">O Líder Absoluto</span>
+                            </div>
+                            <img src="./assets/img/Pain.png" alt="Pain" class="membro-img">
+                            <p class="membro-desc">Líder da Akatsuki e portador do lendário Rinnegan.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Chuva 🌧️</p>
+                                <p><strong>Anel:</strong> Rei (Zero) 💍</p>
+                                <p><strong>Jutsus:</strong> Shinra Tensei, Chibaku Tensei</p>
+                                <p class="ficha-desc">Líder da facção que busca a paz através da dor.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Tobi.png" alt="Tobi (Obito Uchiha)" class="membro-img">
-                    <p class="membro-desc">Misterioso e estratégico, Tobi oculta sua verdadeira identidade por trás de uma máscara. Possui a habilidade de teletransporte e phase através de matéria.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Pain (Nagato)</h3>
-                        <span class="membro-titulo">O Líder Absoluto</span>
+                <div class="membro-card" data-tipo="outro">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Konan</h3>
+                                <span class="membro-titulo">A Anjo de Deus</span>
+                            </div>
+                            <img src="./assets/img/Konan.png" alt="Konan" class="membro-img">
+                            <p class="membro-desc">Mestra na manipulação de papéis e explosivos.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Chuva 🌧️</p>
+                                <p><strong>Anel:</strong> Bya (Branco) 💍</p>
+                                <p><strong>Jutsus:</strong> Dança do Shikigami</p>
+                                <p class="ficha-desc">Única fundadora mulher da organização.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Pain.png" alt="Pain (Nagato)" class="membro-img">
-                    <p class="membro-desc">Líder supremo da Akatsuki, Pain possui o lendário Rinnegan e consegue controlar múltiplos corpos simultaneamente com poder devastador.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Konan</h3>
-                        <span class="membro-titulo">A Rainha do Papel</span>
+                <div class="membro-card" data-tipo="espadachim">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Kisame Hoshigaki</h3>
+                                <span class="membro-titulo">A Besta Sem Cauda</span>
+                            </div>
+                            <img src="./assets/img/Kisame.png" alt="Kisame" class="membro-img">
+                            <p class="membro-desc">Um dos 7 Espadachins da Névoa e portador da Samehada.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Névoa 🌫️</p>
+                                <p><strong>Anel:</strong> Nan (Sul) 💍</p>
+                                <p><strong>Jutsus:</strong> Prisão de Água, Grande Tubarão</p>
+                                <p class="ficha-desc">Conhecido por suas reservas massivas de chakra.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Konan.png" alt="Konan" class="membro-img">
-                    <p class="membro-desc">Única mulher da Akatsuki que perdeu Yahiko. Konan manipula papel de forma criativa e letal, com paixão pela organização.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Kisame Hoshigaki</h3>
-                        <span class="membro-titulo">O Homem-Tubarão</span>
+                <div class="membro-card" data-tipo="outro">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Deidara</h3>
+                                <span class="membro-titulo">O Artista da Explosão</span>
+                            </div>
+                            <img src="./assets/img/Deidara.png" alt="Deidara" class="membro-img">
+                            <p class="membro-desc">A arte é o estouro! Especialista em argila explosiva.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Pedra 🪨</p>
+                                <p><strong>Anel:</strong> Sei (Azul) 💍</p>
+                                <p><strong>Jutsus:</strong> C3, C4 Karura, C0</p>
+                                <p class="ficha-desc">Bombardeiro renegado da Vila da Pedra.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Kisame.png" alt="Kisame Hoshigaki" class="membro-img">
-                    <p class="membro-desc">Parceiro de Itachi, Kisame é um ninjutsu de água de classe S. Sua espada viva Samehada absorve chakra dos inimigos.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Deidara</h3>
-                        <span class="membro-titulo">O Artista da Explosão</span>
+                <div class="membro-card" data-tipo="imortal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Hidan</h3>
+                                <span class="membro-titulo">O Imortal Religioso</span>
+                            </div>
+                            <img src="./assets/img/Hidan.png" alt="Hidan" class="membro-img">
+                            <p class="membro-desc">Seguidor fiel de Jashin e tecnicamente imortal.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Águas Termais ♨️</p>
+                                <p><strong>Anel:</strong> San (Três) 💍</p>
+                                <p><strong>Jutsus:</strong> Ritual de Jashin</p>
+                                <p class="ficha-desc">Assassino em série imortal e sádico.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Deidara.png" alt="Deidara" class="membro-img">
-                    <p class="membro-desc">Jovem e impulsivo, Deidara cria explosivos através de uma boca localizada em suas mãos. Considera seu trabalho uma forma de arte.</p>
                 </div>
 
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Sasori</h3>
-                        <span class="membro-titulo">O Maestro das Marionetes</span>
+                <div class="membro-card" data-tipo="imortal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="membro-header">
+                                <h3>Kakuzu</h3>
+                                <span class="membro-titulo">O Coração Eterno</span>
+                            </div>
+                            <img src="./assets/img/Kakuzu.png" alt="Kakuzu" class="membro-img">
+                            <p class="membro-desc">Tesoureiro da Akatsuki que possui 5 corações.</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="ficha-titulo">Ficha Criminal</h3>
+                            <div class="ficha-info">
+                                <p><strong>Vila:</strong> Cachoeira 🌊</p>
+                                <p><strong>Anel:</strong> Hoku (Norte) 💍</p>
+                                <p><strong>Jutsus:</strong> Máscaras de Elementos</p>
+                                <p class="ficha-desc">Sobreviveu a uma luta contra Hashirama Senju.</p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="./assets/img/Sasori.png" alt="Sasori" class="membro-img">
-                    <p class="membro-desc">Gênio em criação de marionetes, Sasori transformou seu próprio corpo em obra de arte. Controla centenas de marionetes antigas de seu clã.</p>
-                </div>
-
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Kakuzu</h3>
-                        <span class="membro-titulo">O Coração Eterno</span>
-                    </div>
-                    <img src="./assets/img/Kakuzu.png" alt="Kakuzu" class="membro-img">
-                    <p class="membro-desc">Imortal através de transplante de corações, Kakuzu é um caçador de recompensas obcecado por dinheiro e poder.</p>
-                </div>
-
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Hidan</h3>
-                        <span class="membro-titulo">O Imortal Religioso</span>
-                    </div>
-                    <img src="./assets/img/Hidan.png" alt="Hidan" class="membro-img">
-                    <p class="membro-desc">Membro mais novo da Akatsuki, Hidan é imortal através rituais religiosos. Seu nome é escrito com caracteres que significam "espírito eterno".</p>
-                </div>
-
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Zetsu</h3>
-                        <span class="membro-titulo">A Sombra Escondida</span>
-                    </div>
-                    <img src="./assets/img/Zetsu.png" alt="Zetsu" class="membro-img">
-                    <p class="membro-desc">Ser único e misterioso, Zetsu pode se dividir em entidades negra e branca. Trabalha como espiã infiltrada da organização.</p>
-                </div>
-
-                <div class="membro-card">
-                    <div class="membro-header">
-                        <h3>Orochimaru</h3>
-                        <span class="membro-titulo">O Lendário Sannin</span>
-                    </div>
-                    <img src="./assets/img/Orochimaru.png" alt="Orochimaru" class="membro-img">
-                    <p class="membro-desc">Um dos Três Legendários Sannin, Orochimaru é mestre em ninjutsu de cobra e procura a imortalidade através da tecnologia e experimentação.</p>
                 </div>
             </div>
         </section>
 
-        <footer>
+    </main>
+    <footer>
         <p>&copy; 2026 Eliel. Todos os direitos reservados.</p>
     </footer>
-    </main>
+
+    <script src="./script.js"></script>
 </body>
 </html>
