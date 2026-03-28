@@ -34,13 +34,14 @@
             </div>
             <p>Explore o mundo sombrio e fascinante da Akatsuki, a organização de ninjas renegados mais temida do universo de Naruto. Descubra os segredos, membros e histórias por trás dessa enigmática facção.</p>
         </div>
+
         <section id="membros">
-            <div class="intro-membros">
+            <div class="intro-membros animar">
                 <h2>Membros da Akatsuki</h2>
                 <p>A Akatsuki é composta por um grupo de ninjas renegados, cada um com habilidades únicas e especializadas sob a liderança de Pain.</p>
             </div>
 
-            <div class="filtros">
+            <div class="filtros animar">
                 <button class="btn-filtro" onclick="filtrarMembros('todos')">Todos</button>
                 <button class="btn-filtro" onclick="filtrarMembros('uchiha')">Uchiha</button>
                 <button class="btn-filtro" onclick="filtrarMembros('imortal')">Imortais</button>
@@ -48,7 +49,9 @@
             </div>
 
             <div class="membros-container">
-                <div class="membro-card" data-tipo="uchiha">
+
+                <!-- ITACHI -->
+                <div class="membro-card animar" data-tipo="uchiha">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -59,18 +62,56 @@
                             <p class="membro-desc">Mestre em Genjutsu e portador do Mangekyō Sharingan.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Folha 🍃</p>
-                                <p><strong>Anel:</strong> Shu (Vermelho) 💍</p>
-                                <p><strong>Jutsus:</strong> Amaterasu, Tsukuyomi, Susano'o</p>
-                                <p class="ficha-desc">Procurado pelo massacre do clã Uchiha.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Gênio Uchiha</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">S</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">88/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 88%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">95/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 95%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">80/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 80%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">99/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 99%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Folha 🍃</span>
+                                <span class="rpg-anel">Anel: Shu 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="uchiha">
+                <!-- MADARA -->
+                <div class="membro-card animar" data-tipo="uchiha">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -81,18 +122,56 @@
                             <p class="membro-desc">Fundador da Folha e o ninja mais poderoso de sua era.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Folha 🍃</p>
-                                <p><strong>Kekkei Genkai:</strong> Rinnegan / Sharingan</p>
-                                <p><strong>Jutsus:</strong> Tengai Shinsei, Limbo, Susano'o Perfeito</p>
-                                <p class="ficha-desc">Mentor do Plano Olho da Lua.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Lendário Guerreiro</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">S+</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">100/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 100%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">80/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 80%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">100/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 100%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">100/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Folha 🍃</span>
+                                <span class="rpg-anel">Anel: Gyo 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="imortal">
+                <!-- PAIN -->
+                <div class="membro-card animar" data-tipo="imortal">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -103,18 +182,56 @@
                             <p class="membro-desc">Líder da Akatsuki e portador do lendário Rinnegan.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Chuva 🌧️</p>
-                                <p><strong>Anel:</strong> Rei (Zero) 💍</p>
-                                <p><strong>Jutsus:</strong> Shinra Tensei, Chibaku Tensei</p>
-                                <p class="ficha-desc">Líder da facção que busca a paz através da dor.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Líder Absoluto</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">S+</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">100/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 100%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">78/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 78%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">85/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 85%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">95/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Chuva 🌧️</span>
+                                <span class="rpg-anel">Anel: Rei 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="outro">
+                <!-- KONAN -->
+                <div class="membro-card animar" data-tipo="outro">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -125,18 +242,56 @@
                             <p class="membro-desc">Mestra na manipulação de papéis e explosivos.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Chuva 🌧️</p>
-                                <p><strong>Anel:</strong> Bya (Branco) 💍</p>
-                                <p><strong>Jutsus:</strong> Dança do Shikigami</p>
-                                <p class="ficha-desc">Única fundadora mulher da organização.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>A Anjo de Deus</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">A+</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">75/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 75%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">82/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 82%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">70/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 70%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">88/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Chuva 🌧️</span>
+                                <span class="rpg-anel">Anel: Bya 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="espadachim">
+                <!-- KISAME -->
+                <div class="membro-card animar" data-tipo="espadachim">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -147,18 +302,56 @@
                             <p class="membro-desc">Um dos 7 Espadachins da Névoa e portador da Samehada.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Névoa 🌫️</p>
-                                <p><strong>Anel:</strong> Nan (Sul) 💍</p>
-                                <p><strong>Jutsus:</strong> Prisão de Água, Grande Tubarão</p>
-                                <p class="ficha-desc">Conhecido por suas reservas massivas de chakra.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>A Besta Sem Cauda</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">S</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">98/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 98%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">80/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 80%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">92/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 92%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">75/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Névoa 🌫️</span>
+                                <span class="rpg-anel">Anel: Nan 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="outro">
+                <!-- DEIDARA -->
+                <div class="membro-card animar" data-tipo="outro">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -169,18 +362,56 @@
                             <p class="membro-desc">A arte é o estouro! Especialista em argila explosiva.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Pedra 🪨</p>
-                                <p><strong>Anel:</strong> Sei (Azul) 💍</p>
-                                <p><strong>Jutsus:</strong> C3, C4 Karura, C0</p>
-                                <p class="ficha-desc">Bombardeiro renegado da Vila da Pedra.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Artista da Explosão</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">A+</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">78/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 78%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">90/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 90%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">65/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 65%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">82/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 82%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Pedra 🪨</span>
+                                <span class="rpg-anel">Anel: Sei 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="imortal">
+                <!-- HIDAN -->
+                <div class="membro-card animar" data-tipo="imortal">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -191,18 +422,56 @@
                             <p class="membro-desc">Seguidor fiel de Jashin e tecnicamente imortal.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Águas Termais ♨️</p>
-                                <p><strong>Anel:</strong> San (Três) 💍</p>
-                                <p><strong>Jutsus:</strong> Ritual de Jashin</p>
-                                <p class="ficha-desc">Assassino em série imortal e sádico.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Imortal Religioso</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">A+</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">70/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 70%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">75/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 75%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">80/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 80%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">55/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 55%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Termais ♨️</span>
+                                <span class="rpg-anel">Anel: San 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="membro-card" data-tipo="imortal">
+                <!-- KAKUZU -->
+                <div class="membro-card animar" data-tipo="imortal">
                     <div class="card-inner">
                         <div class="card-front">
                             <div class="membro-header">
@@ -213,27 +482,65 @@
                             <p class="membro-desc">Tesoureiro da Akatsuki que possui 5 corações.</p>
                         </div>
                         <div class="card-back">
-                            <h3 class="ficha-titulo">Ficha Criminal</h3>
-                            <div class="ficha-info">
-                                <p><strong>Vila:</strong> Cachoeira 🌊</p>
-                                <p><strong>Anel:</strong> Hoku (Norte) 💍</p>
-                                <p><strong>Jutsus:</strong> Máscaras de Elementos</p>
-                                <p class="ficha-desc">Sobreviveu a uma luta contra Hashirama Senju.</p>
+                            <div class="back-header">
+                                <h3>Ficha Criminal</h3>
+                                <span>O Coração Eterno</span>
+                            </div>
+                            <div class="back-nivel">
+                                <span class="back-nivel-ameaca">Nível de Ameaça</span>
+                                <span class="back-nivel-valor">S</span>
+                            </div>
+                            <div class="back-status">
+                                <div class="status">
+                                    <div class="status-header">
+                                        <span class="status-nome">Chakra</span>
+                                        <span class="status-valor">95/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-chakra" style="--stat-width: 95%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Velocidade</span>
+                                        <span class="status-valor">72/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-velocidade" style="--stat-width: 72%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Força</span>
+                                        <span class="status-valor">90/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-forca" style="--stat-width: 90%;"></div>
+                                    </div>
+                                    <div class="status-header">
+                                        <span class="status-nome">Inteligência</span>
+                                        <span class="status-valor">85/100</span>
+                                    </div>
+                                    <div class="status-barra">
+                                        <div class="status-barra-fill barra-intel" style="--stat-width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-footer">
+                                <span class="rpg-vila">Cachoeira 🌊</span>
+                                <span class="rpg-anel">Anel: Hoku 💍</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section id="origem">
-            <div class="origem-header">
+            <div class="origem-header animar">
                 <h2>A Origem da Akatsuki</h2>
                 <p class="origem-intro">Uma história de esperança, traição e decepção que moldou a mais temida organização ninja</p>
             </div>
 
             <div class="timeline-container">
-                <div class="timeline-item timeline-left">
+                <div class="timeline-item timeline-left animar animar-esquerda">
                     <div class="timeline-content">
                         <span class="timeline-date">Início</span>
                         <h3>A Vila da Chuva - De Amegakure</h3>
@@ -241,7 +548,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item timeline-right">
+                <div class="timeline-item timeline-right animar animar-direita">
                     <div class="timeline-content">
                         <span class="timeline-date">1º Passo</span>
                         <h3>O Encontro Fatídico</h3>
@@ -249,7 +556,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item timeline-left">
+                <div class="timeline-item timeline-left animar animar-esquerda">
                     <div class="timeline-content">
                         <span class="timeline-date">2º Passo</span>
                         <h3>Pilar - Yahiko</h3>
@@ -257,7 +564,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item timeline-right">
+                <div class="timeline-item timeline-right animar animar-direita">
                     <div class="timeline-content">
                         <span class="timeline-date">3º Passo</span>
                         <h3>A Traição - Morte de Yahiko</h3>
@@ -265,7 +572,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item timeline-left">
+                <div class="timeline-item timeline-left animar animar-esquerda">
                     <div class="timeline-content">
                         <span class="timeline-date">4º Passo</span>
                         <h3>A Transformação - Pain Nasce</h3>
@@ -273,7 +580,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item timeline-right">
+                <div class="timeline-item timeline-right animar animar-direita">
                     <div class="timeline-content">
                         <span class="timeline-date">Presente</span>
                         <h3>A Colheita de Ninjas</h3>
@@ -285,7 +592,7 @@
             <div class="fundadores-section">
                 <h3>Os Três Fundadores</h3>
                 <div class="fundadores-container">
-                    <div class="fundador-card">
+                    <div class="fundador-card animar">
                         <img src="./assets/img/Nagato.png" alt="Nagato">
                         <h4>Nagato (Pain)</h4>
                         <span class="fundador-titulo">O Portador do Rinnegan</span>
@@ -296,7 +603,7 @@
                         </div>
                     </div>
 
-                    <div class="fundador-card">
+                    <div class="fundador-card animar">
                         <img src="./assets/img/KonanClas.png" alt="Konan">
                         <h4>Konan</h4>
                         <span class="fundador-titulo">A Guardiã da Chuva</span>
@@ -307,7 +614,7 @@
                         </div>
                     </div>
 
-                    <div class="fundador-card">
+                    <div class="fundador-card animar">
                         <img src="./assets/img/Yahiko.png" alt="Yahiko">
                         <h4>Yahiko</h4>
                         <span class="fundador-titulo">O Sonho que se Desvaneceu</span>
@@ -320,7 +627,7 @@
                 </div>
             </div>
 
-            <div class="manipulador-section">
+            <div class="manipulador-section animar animar-escala">
                 <div class="manipulador-content">
                     <h3>🌑 O Manipulador nas Sombras</h3>
                     <p>Enquanto Pain liderava publicamente, uma força ainda mais antiga operava nos bastidores: <strong>Madara Uchiha</strong>, o ninja lendário que deveria estar morto há séculos.</p>

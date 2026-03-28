@@ -447,38 +447,144 @@ p {
     justify-content: center;
 }
 
-.ficha-titulo {
-    font-size: 1.5rem;
-    color: var(--akatsuki-gold);
+/* ==================== FICHA RPG — CARD BACK ==================== */
+
+.back-header {
     text-align: center;
-    margin-bottom: 15px;
-}
-
-.ficha-info {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.ficha-info p {
-    margin-bottom: 10px;
     border-bottom: 1px solid var(--akatsuki-red-primary);
-    padding-bottom: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    width: 100%;
 }
 
-.btn-voltar {
-    background: transparent;
-    border: 2px solid var(--akatsuki-red-primary);
-    color: var(--akatsuki-light);
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: 0.3s ease;
-    margin-top: auto;
+.back-header h3 {
+    color: var(--akatsuki-red-light);
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
 }
 
-.ficha-desc {
-    font-size: 1rem;
+.back-header span {
+    color: var(--akatsuki-gold);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.back-nivel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(196, 30, 58, 0.15);
+    border: 1px solid rgba(196, 30, 58, 0.4);
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.back-nivel-ameaca {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-nivel-valor {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--akatsuki-gold);
+}
+
+/* ── Barras de stat ── */
+.back-status {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.status {
+    width: 100%;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.status-nome {
+    font-size: 15px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-valor {
+    font-size: 15px;
     color: var(--akatsuki-light);
-    line-height: 1.4;
+    font-weight: 500;
+}
+
+.status-barra {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.status-barra-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.membro-card .status-barra-fill {
+    width: 0 !important;
+}
+
+.membro-card.flipped .status-barra-fill {
+    width: var(--stat-width) !important;
+}
+
+/* Cores de cada stat */
+.barra-chakra    { background: linear-gradient(90deg, #0d2b6e, #00aaff); }
+.barra-velocidade { background: linear-gradient(90deg, #D4AF37, #FFD700); }
+.barra-forca     { background: linear-gradient(90deg, #8B0000, var(--akatsuki-red-primary)); }
+.barra-intel     { background: linear-gradient(90deg, #2a1a4a, #6a3a9a); }
+
+/* ── Rodapé ── */
+.back-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-footer::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 20px;
+    width: 1px;
+    background: rgba(196, 30, 58, 0.4);
+}
+
+.rpg-vila {
+    background: rgba(196, 30, 58, 0.2);
+    border: 1px solid var(--akatsuki-red-primary);
+    padding: 3px 10px;
+    border-radius: 12px;
+    color: var(--akatsuki-red-light);
+    font-size: 11px;
+}
+
+.rpg-anel {
+    color: var(--akatsuki-gold);
+    font-size: 11px;
 }
 
 footer {
