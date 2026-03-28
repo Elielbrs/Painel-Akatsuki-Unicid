@@ -47,7 +47,6 @@
                 <button class="btn-filtro" onclick="filtrarMembros('imortal')">Imortais</button>
                 <button class="btn-filtro" onclick="filtrarMembros('espadachim')">Espadachins</button>
             </div>
-
             <div class="membros-container">
 
                 <!-- ITACHI -->
@@ -530,6 +529,71 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- DUPLAS AKATSUKI - UI/UX PREMIUM -->
+        <section id="duplas">
+            <div class="duplas-header">
+                <h2>Duplas da Akatsuki</h2>
+                <p>As duplas mais temidas do mundo ninja, com sinergias únicas e missões lendárias. Clique para descobrir curiosidades e detalhes de cada parceria!</p>
+            </div>
+            <div class="duplas-grid">
+                <div class="dupla-premium-card" style="--dupla-bg:url('./assets/img/itachi-kisame-bg.jpg')">
+                    <div class="dupla-premium-overlay"></div>
+                    <div class="dupla-premium-content">
+                        <div class="dupla-premium-imgs">
+                            <img src="./assets/img/Itachi.png" alt="Itachi" class="dupla-premium-img">
+                            <img src="./assets/img/Kisame.png" alt="Kisame" class="dupla-premium-img">
+                        </div>
+                        <h3>Itachi & Kisame</h3>
+                        <span class="dupla-premium-titulo">A Névoa Silenciosa</span>
+                        <button class="dupla-premium-btn" data-dupla="itachi-kisame">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div class="dupla-premium-card" style="--dupla-bg:url('./assets/img/hidan-kakuzu-bg.jpg')">
+                    <div class="dupla-premium-overlay"></div>
+                    <div class="dupla-premium-content">
+                        <div class="dupla-premium-imgs">
+                            <img src="./assets/img/Hidan.png" alt="Hidan" class="dupla-premium-img">
+                            <img src="./assets/img/Kakuzu.png" alt="Kakuzu" class="dupla-premium-img">
+                        </div>
+                        <h3>Hidan & Kakuzu</h3>
+                        <span class="dupla-premium-titulo">Imortais Mercenários</span>
+                        <button class="dupla-premium-btn" data-dupla="hidan-kakuzu">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div class="dupla-premium-card" style="--dupla-bg:url('./assets/img/deidara-sasori-bg.jpg')">
+                    <div class="dupla-premium-overlay"></div>
+                    <div class="dupla-premium-content">
+                        <div class="dupla-premium-imgs">
+                            <img src="./assets/img/Deidara.png" alt="Deidara" class="dupla-premium-img">
+                            <img src="./assets/img/Sasori.png" alt="Sasori" class="dupla-premium-img">
+                        </div>
+                        <h3>Deidara & Sasori</h3>
+                        <span class="dupla-premium-titulo">Arte Explosiva</span>
+                        <button class="dupla-premium-btn" data-dupla="deidara-sasori">Ver Detalhes</button>
+                    </div>
+                </div>
+                <div class="dupla-premium-card" style="--dupla-bg:url('./assets/img/pain-konan-bg.jpg')">
+                    <div class="dupla-premium-overlay"></div>
+                    <div class="dupla-premium-content">
+                        <div class="dupla-premium-imgs">
+                            <img src="./assets/img/Pain.png" alt="Pain" class="dupla-premium-img">
+                            <img src="./assets/img/Konan.png" alt="Konan" class="dupla-premium-img">
+                        </div>
+                        <h3>Pain & Konan</h3>
+                        <span class="dupla-premium-titulo">Deuses da Chuva</span>
+                        <button class="dupla-premium-btn" data-dupla="pain-konan">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal de detalhes das duplas -->
+            <div class="dupla-modal" id="dupla-modal" style="display:none;">
+                <div class="dupla-modal-content">
+                    <span class="dupla-modal-close" id="dupla-modal-close">&times;</span>
+                    <div id="dupla-modal-body"></div>
+                </div>
             </div>
         </section>
 
