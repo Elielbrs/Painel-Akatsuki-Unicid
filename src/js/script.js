@@ -142,4 +142,45 @@ document.addEventListener("DOMContentLoaded", () => {
         origemObserver.observe(manipulador);
     }
 
+
+    // ════════════════════════════════════════════════════════
+    // 6. FLIP CARDS DOS OBJETIVOS
+    // ════════════════════════════════════════════════════════
+    const objetivoCards = document.querySelectorAll(".objetivo-card");
+    
+    objetivoCards.forEach((card) => {
+        card.addEventListener("click", function () {
+            this.classList.toggle("flipped");
+        });
+
+        card.setAttribute("tabindex", "0");
+        card.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                this.classList.toggle("flipped");
+            }
+        });
+    });
+
+
+    // ════════════════════════════════════════════════════════
+    // 7. ANIMAÇÃO DE ENTRADA DOS CARDS DE OBJETIVOS
+    // ════════════════════════════════════════════════════════
+    const objetivoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity   = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    objetivoCards.forEach((card) => {
+        objetivoObserver.observe(card);
+    });
+
 });
+
