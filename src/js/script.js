@@ -197,13 +197,89 @@ document.addEventListener("DOMContentLoaded", () => {
     objetivosObserver.observe(card);
   });
 
-  // Animar visão final com escala
+  // Animar visão final com escala - Observer separado com melhor configuração
   if (objetivosVisao) {
-    objetivosVisao.style.opacity = "0";
-    objetivosVisao.style.transform = "scale(0.95) translateY(30px)";
-    objetivosVisao.style.transition =
-      "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s";
-    objetivosObserver.observe(objetivosVisao);
+    const visaoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visivel");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+    visaoObserver.observe(objetivosVisao);
+  }
+
+  // ════════════════════════════════════════════════════════
+  // DUPLAS PREMIUM — Animação de entrada
+  // ════════════════════════════════════════════════════════
+  const duplasPremiumCards = document.querySelectorAll(".dupla-premium-card");
+  
+  const duplasObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visivel");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
+
+  duplasPremiumCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    duplasObserver.observe(card);
+  });
+
+  // ════════════════════════════════════════════════════════
+  // CURIOSIDADES — Animação de entrada e interatividade
+  // ════════════════════════════════════════════════════════
+  const curiosidadeCards = document.querySelectorAll(".curiosidade-card");
+  const conclusao = document.querySelector(".curiosidades-conclusao");
+
+  const curiosidadesObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visivel");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
+
+  curiosidadeCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.08}s`;
+    curiosidadesObserver.observe(card);
+  });
+
+  // Animar conclusão
+  if (conclusao) {
+    const conclusaoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visivel");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+    conclusaoObserver.observe(conclusao);
   }
 });
 

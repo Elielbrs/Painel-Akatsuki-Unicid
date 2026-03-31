@@ -47,6 +47,14 @@
     background-size: cover;
     background-position: center;
     border: 2.5px solid var(--akatsuki-red-primary);
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+}
+
+.dupla-premium-card.visivel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .dupla-premium-card:hover {
     transform: scale(1.03) translateY(-6px);
@@ -280,6 +288,14 @@
     font-size: 2.5rem;
     text-align: center;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    color: var(--akatsuki-gold);
+    transition: all 0.3s ease;
+}
+
+.objetivo-card:hover .objetivo-icon {
+    color: var(--akatsuki-red-primary);
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.6));
 }
 
 .objetivo-card h3 {
@@ -465,6 +481,7 @@
     backdrop-filter: blur(10px);
     opacity: 0;
     transform: scale(0.95) translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 
 .objetivos-visao::before {
@@ -585,6 +602,530 @@
 
     .objetivo-card h3 {
         font-size: 1.1rem;
+    }
+}
+
+/* ==================== SEÇÃO CURIOSIDADES ==================== */
+#curiosidades {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.curiosidades-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.curiosidades-header h2 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--akatsuki-red-primary), var(--akatsuki-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.curiosidades-header p {
+    font-size: 1.3rem;
+    color: var(--akatsuki-light);
+    text-shadow: 1px 1px 3px var(--akatsuki-black);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.curiosidades-container {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* ── CARD BASE ── */
+.curiosidade-card {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.2), rgba(58, 26, 74, 0.15));
+    border: 2px solid var(--akatsuki-red-primary);
+    border-radius: 12px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curiosidade-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--akatsuki-red-primary), var(--akatsuki-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.curiosidade-card:hover {
+    transform: translateY(-8px) scale(1);
+    border-color: var(--akatsuki-gold);
+    box-shadow: 0 12px 40px rgba(196, 30, 58, 0.4), inset 0 1px 0 rgba(212, 175, 55, 0.1);
+}
+
+.curiosidade-card:hover::before {
+    opacity: 1;
+}
+
+.curiosidade-card.visivel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ── ESTRUTURA COM IMAGEM ── */
+.curiosidade-top {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.curiosidade-header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.curiosidade-imagem-frame {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(58, 26, 74, 0.3));
+    border: 4px solid var(--akatsuki-gold);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.3), 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curiosidade-card:hover .curiosidade-imagem-frame {
+    border-color: #FFD700;
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.5), 0 12px 30px rgba(212, 175, 55, 0.3);
+}
+
+.curiosidade-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.curiosidade-card:hover .curiosidade-img {
+    transform: scale(1.12);
+}
+
+/* ── BADGE ── */
+.curiosidade-badge {
+    display: inline-block;
+    background: rgba(196, 30, 58, 0.25);
+    border: 1px solid var(--akatsuki-red-primary);
+    color: var(--akatsuki-light);
+    padding: 5px 12px;
+    border-radius: 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    transition: all 0.2s ease;
+}
+
+.curiosidade-badge.urgente {
+    background: var(--akatsuki-red-primary);
+    color: var(--akatsuki-gold);
+    border-color: var(--akatsuki-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.curiosidade-card:hover .curiosidade-badge.urgente {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+/* ── TÍTULOS E TEXTO ── */
+.curiosidade-card h3 {
+    font-size: 1.5rem;
+    color: var(--akatsuki-white);
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px var(--akatsuki-black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curiosidade-card h3 i {
+    color: var(--akatsuki-gold);
+    font-size: 1.3em;
+}
+
+.curiosidade-intro {
+    font-size: 0.95rem;
+    color: var(--akatsuki-gold);
+    font-weight: 500;
+    margin: 0;
+    font-style: italic;
+}
+
+.curiosidade-texto {
+    font-size: 0.9rem;
+    color: var(--akatsuki-light);
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 1px 1px 2px var(--akatsuki-black);
+}
+
+.curiosidade-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.curiosidade-destaque {
+    background: rgba(212, 175, 55, 0.15);
+    border-left: 3px solid var(--akatsuki-gold);
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--akatsuki-light);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.curiosidade-destaque strong {
+    color: var(--akatsuki-gold);
+}
+
+/* ── SKILLS LIST ── */
+.curiosidade-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.curiosidade-skills span {
+    background: rgba(196, 30, 58, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--akatsuki-light);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* ── FLIP CARD (Tobi) ── */
+.curiosidade-flip {
+    perspective: 1000px;
+    height: auto;
+    min-height: 280px;
+}
+
+.curiosidade-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.curiosidade-flip:hover .curiosidade-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.curiosidade-flip-front,
+.curiosidade-flip-back {
+    position: absolute;
+    width: 100%;
+    padding: 24px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.curiosidade-flip-back {
+    transform: rotateY(180deg);
+}
+
+.curiosidade-flip-front p:last-child {
+    font-size: 0.8rem;
+    color: var(--akatsuki-gold);
+    font-weight: 600;
+    margin-top: 10px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* ── TIMELINE ── */
+.timeline-compacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.timeline-item-compacto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+}
+
+.tl-year {
+    color: var(--akatsuki-gold);
+    font-weight: 600;
+    min-width: 70px;
+}
+
+.tl-event {
+    color: var(--akatsuki-light);
+    flex: 1;
+}
+
+.tl-bar {
+    width: 80px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tl-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--akatsuki-red-primary), var(--akatsuki-gold));
+    width: var(--poder);
+    border-radius: 10px;
+}
+
+/* ── STATS ── */
+.stats-compacto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.stat-box {
+    background: rgba(196, 30, 58, 0.15);
+    border: 1px solid rgba(196, 30, 58, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 1.6rem;
+    color: var(--akatsuki-gold);
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--akatsuki-light);
+    margin-top: 4px;
+}
+
+/* ── RANKING ── */
+.rank-compacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.rank-line {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.rank-name {
+    font-size: 0.85rem;
+    color: var(--akatsuki-gold);
+    font-weight: 600;
+}
+
+.rank-bar-container {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rank-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--akatsuki-red-primary), var(--akatsuki-gold));
+    width: var(--width);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+/* ── FATOS ── */
+.fatos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.fato-item {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 3px solid var(--akatsuki-gold);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--akatsuki-light);
+    line-height: 1.5;
+}
+
+.fato-item strong {
+    color: var(--akatsuki-gold);
+}
+
+/* ── CARD GRANDE - IMPACTO ── */
+.curiosidade-grande-impacto {
+    grid-column: span 1;
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 170, 0, 0.1));
+    border: 2px solid #ff6666;
+}
+
+.impacto-texto {
+    font-size: 0.95rem;
+    color: var(--akatsuki-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.impacto-texto strong {
+    color: #ffbbbb;
+}
+
+/* ── CONCLUSÃO ── */
+.curiosidades-conclusao {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(58, 26, 74, 0.3));
+    border: 2px solid var(--akatsuki-gold);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.curiosidades-conclusao.visivel {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.curiosidades-conclusao h3 {
+    font-size: 2rem;
+    color: var(--akatsuki-gold);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px var(--akatsuki-black);
+}
+
+.curiosidades-conclusao p {
+    font-size: 1rem;
+    color: var(--akatsuki-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── RESPONSIVIDADE ── */
+@media (max-width: 768px) {
+    .curiosidade-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curiosidade-imagem-frame {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stats-compacto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .curiosidades-conclusao {
+        padding: 30px 20px;
+    }
+
+    .curiosidades-conclusao h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curiosidade-card {
+        padding: 16px;
+    }
+
+    .curiosidade-imagem-frame {
+        width: 140px;
+        height: 140px;
+        border: 3px solid var(--akatsuki-gold);
+    }
+
+    .curiosidade-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .curiosidade-imagem-frame {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stats-compacto {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .stat-num {
+        font-size: 1.3rem;
+    }
+
+    .rank-line {
+        grid-template-columns: 60px 1fr;
+        font-size: 0.8rem;
     }
 }
 
@@ -844,6 +1385,39 @@ header {
     padding-bottom: 3px;
 }
 
+/* ==================== BOTÃO VOLTAR AO TOPO ==================== */
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--akatsuki-red-primary);
+    border: 2px solid var(--akatsuki-red-dark);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 9999;
+    color: var(--akatsuki-white);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-topo:hover {
+    background: var(--akatsuki-red-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px var(--akatsuki-red-primary);
+}
+
 
 /* ==================== MAIN CONTENT ==================== */
 main {
@@ -1070,16 +1644,21 @@ p {
 }
 
 .membro-card::after{
-    content: '';
+    content: "Clique para ver ficha ▼";
     position: absolute;
-    top: -65%;
-    left: -60%;
-    width: 20%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(25deg);
-    transition: 0.5s ease;
-    pointer-events: none;
+    bottom: 10px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    transition: opacity 0.3s;
+    
+}
+
+.membro-card.flipped::after {
+    opacity: 0;
+}
+
+.membro-card, .dupla-premium-card {
+    cursor: pointer;
 }
 
 .membro-card:hover::after {
@@ -1551,6 +2130,14 @@ footer {
     backdrop-filter: blur(8px);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+}
+
+.fundador-card.visivel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fundador-card::before {
@@ -1706,6 +2293,7 @@ footer {
 .truth-icon {
     font-size: 2rem;
     animation: pulse 2s ease-in-out infinite;
+    color: var(--akatsuki-gold);
 }
 
 @keyframes pulse {
