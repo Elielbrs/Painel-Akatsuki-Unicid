@@ -169,6 +169,42 @@ document.addEventListener("DOMContentLoaded", () => {
       "opacity 0.6s ease, transform 0.6s ease 0.2s";
     origemObserver.observe(manipulador);
   }
+
+  // ════════════════════════════════════════════════════════
+  // ANIMAÇÕES DA SEÇÃO OBJETIVOS
+  // ════════════════════════════════════════════════════════
+  const objetivoCards = document.querySelectorAll(".objetivo-card");
+  const objetivosVisao = document.querySelector(".objetivos-visao");
+
+  // Observer para animação dos cards de objetivos
+  const objetivosObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visivel");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
+
+  // Aplicar staggered animation aos cards
+  objetivoCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    objetivosObserver.observe(card);
+  });
+
+  // Animar visão final com escala
+  if (objetivosVisao) {
+    objetivosVisao.style.opacity = "0";
+    objetivosVisao.style.transform = "scale(0.95) translateY(30px)";
+    objetivosVisao.style.transition =
+      "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s";
+    objetivosObserver.observe(objetivosVisao);
+  }
 });
 
 // ════════════════════════════════════════════════════════
