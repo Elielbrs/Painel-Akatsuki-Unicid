@@ -195,6 +195,67 @@
         font-size: 1.3rem;
     }
 }
+
+/* ==================== SEÇÃO MAPA ==================== */
+#mapa {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.96), rgba(20,20,20,0.98));
+}
+
+.mapa-header {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.mapa-header h2 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--akatsuki-red-primary), var(--akatsuki-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    margin-bottom: 16px;
+}
+
+.mapa-header p {
+    color: var(--akatsuki-light);
+    font-size: 1.2rem;
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.mapa-imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    border: 3px solid var(--akatsuki-red-primary);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    display: block;
+}
+
+.mapa-header.visivel {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.mapa-imagem.visivel {
+    animation: fadeInScale 1s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
 /* ==================== SEÇÃO OBJETIVOS ==================== */
 #objetivos {
     width: 100%;
@@ -2160,6 +2221,29 @@ footer {
 
 .fundador-card:hover::before {
     opacity: 1;
+}
+
+/* ==================== KEYFRAMES PARA MAPA ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .fundador-card img {

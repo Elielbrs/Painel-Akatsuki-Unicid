@@ -281,6 +281,44 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     conclusaoObserver.observe(conclusao);
   }
+
+  // ANIMAÇÕES DA SEÇÃO MAPA
+  const mapaHeader = document.querySelector(".mapa-header");
+  const mapaImagem = document.querySelector(".mapa-imagem");
+
+  if (mapaHeader) {
+    const mapaObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visivel");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+    mapaObserver.observe(mapaHeader);
+  }
+
+  if (mapaImagem) {
+    const mapaImgObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visivel");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+    mapaImgObserver.observe(mapaImagem);
+  }
 });
 
 // ════════════════════════════════════════════════════════
