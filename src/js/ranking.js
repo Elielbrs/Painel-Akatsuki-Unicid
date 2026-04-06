@@ -195,11 +195,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="ranking-video-container">
           <iframe
-            src="${membro.video}"
+            src="${membro.video}?enablejsapi=1"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
           </iframe>
           <div class="video-overlay"></div>
         </div>
