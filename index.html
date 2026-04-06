@@ -15,6 +15,9 @@
                     <li><a href="#origem">Origem</a></li>
                     <li><a href="#membros">Membros</a></li>
                     <li><a href="#duplas">Duplas</a></li>
+                    <li><a href="#ranking">Ranking</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#comparador">Comparador</a></li>
                     <li><a href="#objetivos">Objetivos</a></li>
                     <li><a href="#wallpapers">Wallpapers</a></li>
                     <li><a href="#curiosidades">Curiosidades</a></li>
@@ -155,6 +158,24 @@
                 <button class="btn-filtro" onclick="filtrarMembros('imortal')">Imortais</button>
                 <button class="btn-filtro" onclick="filtrarMembros('espadachim')">Espadachins</button>
             </div>
+
+            <div class="busca-container animar">
+                <div class="busca-wrapper">
+                    <i class="fas fa-search busca-icone"></i>
+                    <input
+                        type="text"
+                        id="busca-input"
+                        class="busca-input"
+                        placeholder="Buscar membro... ex: Itachi, Pain, Kisame"
+                        autocomplete="off"
+                    >
+                    <button class="busca-limpar" id="busca-limpar" aria-label="Limpar busca">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="busca-resultado" id="busca-resultado"></p>
+            </div>
+
             <div class="membros-container">
 
                 <!-- ITACHI -->
@@ -870,7 +891,168 @@
             </div>
         </section>
 
-        <!-- SEÇÃO CURIOSIDADES -->
+        <!-- SEÇÃO RANKING DE PODERES -->
+        <section id="ranking">
+            <div class="ranking-header animar">
+                <h2>Ranking de Poderes</h2>
+                <p>Os ninjas mais poderosos da Akatsuki, classificados por sua capacidade de combate e domínio de técnicas especializadas</p>
+            </div>
+
+            <!-- STATS RÁPIDOS -->
+            <div class="ranking-stats animar">
+                <div class="stat-card">
+                    <i class="fas fa-bolt"></i>
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Membros Elite</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-crown"></i>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Nível S+</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield"></i>
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Imortais</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Poderes Únicos</div>
+                </div>
+            </div>
+
+            <!-- FILTROS -->
+            <div class="ranking-filtros animar">
+                <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="ninjutsu">Ninjutsu</button>
+                <button class="filtro-btn" data-categoria="genjutsu">Genjutsu</button>
+                <button class="filtro-btn" data-categoria="taijutsu">Taijutsu</button>
+                <button class="filtro-btn" data-categoria="kekkei">Kekkei Genkai</button>
+            </div>
+
+            <!-- GRID DE CARDS -->
+            <div class="ranking-grid" id="ranking-grid">
+                <!-- Preenchido via JavaScript -->
+            </div>
+
+            <!-- ANÁLISE GERAL -->
+            <div class="ranking-analise animar">
+                <h3>Análise Geral de Poder</h3>
+                <div class="analise-grid">
+                    <div class="analise-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Poder Máximo</h4>
+                        <p class="analise-valor">100</p>
+                        <p class="analise-desc">Pain (Rinnegan)</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-crown"></i>
+                        <h4>Elite S+</h4>
+                        <p class="analise-valor">3</p>
+                        <p class="analise-desc">Portadores de Ningenkai Fōma</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Poder Médio</h4>
+                        <p class="analise-valor">89%</p>
+                        <p class="analise-desc">Equipe Núcleo da Akatsuki</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-shield"></i>
+                        <h4>Imortalidade</h4>
+                        <p class="analise-valor">44%</p>
+                        <p class="analise-desc">Membros com Habilidades de Reconexão</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO QUIZ -->
+        <section id="quiz">
+            <div class="quiz-header animar">
+                <h2>Quiz da Akatsuki</h2>
+                <p>Teste seus conhecimentos sobre a organização mais temida do mundo ninja</p>
+            </div>
+
+            <div class="quiz-container">
+                <!-- Tela inicial -->
+                <div class="quiz-tela" id="quiz-inicio">
+                    <img src="./assets/img/Nuvem.png" alt="Akatsuki" class="quiz-logo">
+                    <h3>Você conhece a Akatsuki?</h3>
+                    <p>8 perguntas — cada resposta certa vale 1 ponto</p>
+                    <button class="quiz-btn-iniciar" id="quiz-iniciar">
+                        <i class="fas fa-play"></i> Iniciar Quiz
+                    </button>
+                </div>
+
+                <!-- Tela de pergunta -->
+                <div class="quiz-tela quiz-oculto" id="quiz-pergunta">
+                    <div class="quiz-progresso">
+                        <span id="quiz-num">1</span>/8
+                        <div class="quiz-barra-progresso">
+                            <div class="quiz-barra-fill" id="quiz-barra-fill"></div>
+                        </div>
+                        <span class="quiz-pontos-label">Pontos: <strong id="quiz-pontos">0</strong></span>
+                    </div>
+                    <h3 id="quiz-texto-pergunta"></h3>
+                    <div class="quiz-opcoes" id="quiz-opcoes"></div>
+                    <p class="quiz-feedback" id="quiz-feedback"></p>
+                </div>
+
+                <!-- Tela de resultado -->
+                <div class="quiz-tela quiz-oculto" id="quiz-resultado">
+                    <div class="quiz-resultado-icone" id="quiz-resultado-icone"></div>
+                    <h3 id="quiz-resultado-titulo"></h3>
+                    <p id="quiz-resultado-msg"></p>
+                    <span class="quiz-pontuacao-final" id="quiz-pontuacao-final"></span>
+                    <button class="quiz-btn-iniciar" id="quiz-reiniciar">
+                        <i class="fas fa-redo"></i> Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO COMPARADOR -->
+        <section id="comparador">
+            <div class="comparador-header animar">
+                <h2>Comparador de Membros</h2>
+                <p>Selecione dois membros e compare seus poderes lado a lado</p>
+            </div>
+
+            <div class="comparador-selects animar">
+                <select class="comparador-select" id="select-1">
+                    <option value="">— Escolha o 1º membro —</option>
+                    <option value="itachi">Itachi Uchiha</option>
+                    <option value="madara">Madara Uchiha</option>
+                    <option value="pain">Pain (Nagato)</option>
+                    <option value="konan">Konan</option>
+                    <option value="kisame">Kisame</option>
+                    <option value="deidara">Deidara</option>
+                    <option value="hidan">Hidan</option>
+                    <option value="kakuzu">Kakuzu</option>
+                    <option value="tobi">Tobi (Obito)</option>
+                </select>
+
+                <span class="comparador-vs">VS</span>
+
+                <select class="comparador-select" id="select-2">
+                    <option value="">— Escolha o 2º membro —</option>
+                    <option value="itachi">Itachi Uchiha</option>
+                    <option value="madara">Madara Uchiha</option>
+                    <option value="pain">Pain (Nagato)</option>
+                    <option value="konan">Konan</option>
+                    <option value="kisame">Kisame</option>
+                    <option value="deidara">Deidara</option>
+                    <option value="hidan">Hidan</option>
+                    <option value="kakuzu">Kakuzu</option>
+                    <option value="tobi">Tobi (Obito)</option>
+                </select>
+            </div>
+
+            <div class="comparador-resultado" id="comparador-resultado"></div>
+        </section>
+
         <section id="curiosidades">
             <div class="curiosidades-header">
                 <h2>Curiosidades da Akatsuki</h2>
@@ -1053,5 +1235,6 @@
     </button>
 
     <script src="./src/js/script.js"></script>
+    <script src="./src/js/ranking.js"></script>
 </body>
 </html>
