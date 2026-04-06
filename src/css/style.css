@@ -1459,7 +1459,7 @@
     
     .ranking-video-container {
         touch-action: auto !important;
-        -webkit-user-select: none;
+
         -webkit-touch-callout: none;
     }
 }
