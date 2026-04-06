@@ -6,6 +6,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const secoes = document.querySelectorAll("section[id]");
 
   // ════════════════════════════════════════════════════════
+  // 0. MENU HAMBURGUER MOBILE
+  // ════════════════════════════════════════════════════════
+  const hamburguer = document.getElementById('nav-hamburguer');
+  const navMenu    = document.querySelector('.nav-bar nav');
+
+  hamburguer?.addEventListener('click', () => {
+      const aberto = navMenu.classList.toggle('aberto');
+      hamburguer.innerHTML = aberto
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  document.querySelectorAll('.nav-bar nav a').forEach(link => {
+      link.addEventListener('click', () => {
+          navMenu.classList.remove('aberto');
+          hamburguer.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+  });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-bar')) {
+          navMenu.classList.remove('aberto');
+          hamburguer.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+  });
+
+  // ════════════════════════════════════════════════════════
   // 1. FLIP CARD
   // ════════════════════════════════════════════════════════
   cards.forEach((card) => {
@@ -85,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (link) => link.getAttribute("href") === `#${id}`,
     );
     if (linkAtivo) linkAtivo.classList.add("nav-ativa");
+    document.title = `Akatsuki Wiki — ${linkAtivo?.textContent.trim() ?? 'Home'}`;
   };
 
   const scrollspyObserver = new IntersectionObserver(
