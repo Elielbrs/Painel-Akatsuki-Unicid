@@ -6,16 +6,29 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Akatsuki-wiki</title>
+    <meta name="description" content="Wiki completa da Akatsuki — membros, duplas, origem, poderes e curiosidades da organização mais temida do universo Naruto">
+    <meta name="keywords" content="Akatsuki, Naruto, Itachi, Pain, Madara, wiki, ninja">
+    <meta name="author" content="Eliel">
+    <meta property="og:title" content="Akatsuki Wiki">
+    <meta property="og:description" content="Explore o mundo sombrio da Akatsuki — membros, duplas, origem e poderes">
+    <meta property="og:image" content="./assets/img/Nuvem.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="./assets/img/Nuvem.png">
 </head>
 <body>
     <header>
         <div class="nav-bar">
+            <button class="nav-hamburguer" id="nav-hamburguer" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul>
                     <li><a href="#origem">Origem</a></li>
                     <li><a href="#membros">Membros</a></li>
                     <li><a href="#duplas">Duplas</a></li>
-                    <li><a href="#mapa">Mapa</a></li>
+                    <li><a href="#ranking">Ranking</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#comparador">Comparador</a></li>
                     <li><a href="#objetivos">Objetivos</a></li>
                     <li><a href="#wallpapers">Wallpapers</a></li>
                     <li><a href="#curiosidades">Curiosidades</a></li>
@@ -97,7 +110,7 @@
                 <h3>Os Três Fundadores</h3>
                 <div class="fundadores-container">
                     <div class="fundador-card animar">
-                        <img src="./assets/img/Nagato.png" alt="Nagato">
+                        <img src="./assets/img/Nagato.png" alt="Nagato" loading="lazy">
                         <h4>Nagato (Pain)</h4>
                         <span class="fundador-titulo">O Portador do Rinnegan</span>
                         <p>O gênio oculto por trás da Akatsuki. Nagato visualizava um mundo onde a dor traz paz. Seu poder Rinnegan revolucionou a organização.</p>
@@ -108,7 +121,7 @@
                     </div>
 
                     <div class="fundador-card animar">
-                        <img src="./assets/img/KonanClas.png" alt="Konan">
+                        <img src="./assets/img/KonanClas.png" alt="Konan" loading="lazy">
                         <h4>Konan</h4>
                         <span class="fundador-titulo">A Guardiã da Chuva</span>
                         <p>Única mulher fundadora, Konan permaneceu leal ao lado de Nagato mesmo após a morte de Yahiko. Sua fidelidade definia a verdadeira Akatsuki.</p>
@@ -119,7 +132,7 @@
                     </div>
 
                     <div class="fundador-card animar">
-                        <img src="./assets/img/Yahiko.png" alt="Yahiko">
+                        <img src="./assets/img/Yahiko.png" alt="Yahiko" loading="lazy">
                         <h4>Yahiko</h4>
                         <span class="fundador-titulo">O Sonho que se Desvaneceu</span>
                         <p>O jovem visionário cuja morte marcou o ponto de virada. Seu sacrifício transformou ideais pacíficos em poder absolutista e busca por dominação.</p>
@@ -144,6 +157,10 @@
             </div>
         </section>
 
+        <div class="divisor-secao">
+            <img src="./assets/img/Nuvem.png" alt="" class="divisor-nuvem" aria-hidden="true">
+        </div>
+
         <section id="membros">
             <div class="intro-membros animar">
                 <h2>Membros da Akatsuki</h2>
@@ -156,6 +173,24 @@
                 <button class="btn-filtro" onclick="filtrarMembros('imortal')">Imortais</button>
                 <button class="btn-filtro" onclick="filtrarMembros('espadachim')">Espadachins</button>
             </div>
+
+            <div class="busca-container animar">
+                <div class="busca-wrapper">
+                    <i class="fas fa-search busca-icone"></i>
+                    <input
+                        type="text"
+                        id="busca-input"
+                        class="busca-input"
+                        placeholder="Buscar membro... ex: Itachi, Pain, Kisame"
+                        autocomplete="off"
+                    >
+                    <button class="busca-limpar" id="busca-limpar" aria-label="Limpar busca">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="busca-resultado" id="busca-resultado"></p>
+            </div>
+
             <div class="membros-container">
 
                 <!-- ITACHI -->
@@ -166,7 +201,7 @@
                                 <h3>Itachi Uchiha</h3>
                                 <span class="membro-titulo">O Gênio Uchiha</span>
                             </div>
-                            <img src="/assets/img/Itachi.png" alt="Itachi" class="membro-img">
+                            <img src="/assets/img/Itachi.png" alt="Itachi" class="membro-img" loading="lazy">
                             <p class="membro-desc">Mestre em Genjutsu e portador do Mangekyō Sharingan.</p>
                         </div>
                         <div class="card-back">
@@ -226,7 +261,7 @@
                                 <h3>Madara Uchiha</h3>
                                 <span class="membro-titulo">O Lendário Guerreiro</span>
                             </div>
-                            <img src="/assets/img/Madara.png" alt="Madara" class="membro-img">
+                            <img src="/assets/img/Madara.png" alt="Madara" class="membro-img" loading="lazy">
                             <p class="membro-desc">Fundador da Folha e o ninja mais poderoso de sua era.</p>
                         </div>
                         <div class="card-back">
@@ -286,7 +321,7 @@
                                 <h3>Pain (Nagato)</h3>
                                 <span class="membro-titulo">O Líder Absoluto</span>
                             </div>
-                            <img src="/assets/img/Pain.png" alt="Pain" class="membro-img">
+                            <img src="/assets/img/Pain.png" alt="Pain" class="membro-img" loading="lazy">
                             <p class="membro-desc">Líder da Akatsuki e portador do lendário Rinnegan.</p>
                         </div>
                         <div class="card-back">
@@ -346,7 +381,7 @@
                                 <h3>Konan</h3>
                                 <span class="membro-titulo">A Anjo de Deus</span>
                             </div>
-                            <img src="/assets/img/Konan.png" alt="Konan" class="membro-img">
+                            <img src="/assets/img/Konan.png" alt="Konan" class="membro-img" loading="lazy">
                             <p class="membro-desc">Mestra na manipulação de papéis e explosivos.</p>
                         </div>
                         <div class="card-back">
@@ -406,7 +441,7 @@
                                 <h3>Kisame Hoshigaki</h3>
                                 <span class="membro-titulo">A Besta Sem Cauda</span>
                             </div>
-                            <img src="/assets/img/Kisame.png" alt="Kisame" class="membro-img">
+                            <img src="/assets/img/Kisame.png" alt="Kisame" class="membro-img" loading="lazy">
                             <p class="membro-desc">Um dos 7 Espadachins da Névoa e portador da Samehada.</p>
                         </div>
                         <div class="card-back">
@@ -466,7 +501,7 @@
                                 <h3>Deidara</h3>
                                 <span class="membro-titulo">O Artista da Explosão</span>
                             </div>
-                            <img src="/assets/img/Deidara.png" alt="Deidara" class="membro-img">
+                            <img src="/assets/img/Deidara.png" alt="Deidara" class="membro-img" loading="lazy">
                             <p class="membro-desc">A arte é o estouro! Especialista em argila explosiva.</p>
                         </div>
                         <div class="card-back">
@@ -526,7 +561,7 @@
                                 <h3>Hidan</h3>
                                 <span class="membro-titulo">O Imortal Religioso</span>
                             </div>
-                            <img src="/assets/img/Hidan.png" alt="Hidan" class="membro-img">
+                            <img src="/assets/img/Hidan.png" alt="Hidan" class="membro-img" loading="lazy">
                             <p class="membro-desc">Seguidor fiel de Jashin e tecnicamente imortal.</p>
                         </div>
                         <div class="card-back">
@@ -586,7 +621,7 @@
                                 <h3>Kakuzu</h3>
                                 <span class="membro-titulo">O Coração Eterno</span>
                             </div>
-                            <img src="/assets/img/Kakuzu.png" alt="Kakuzu" class="membro-img">
+                            <img src="/assets/img/Kakuzu.png" alt="Kakuzu" class="membro-img" loading="lazy">
                             <p class="membro-desc">Tesoureiro da Akatsuki que possui 5 corações.</p>
                         </div>
                         <div class="card-back">
@@ -646,7 +681,7 @@
                                 <h3>Tobi (Obito)</h3>
                                 <span class="membro-titulo">O Manipulador Oculto</span>
                             </div>
-                            <img src="/assets/img/Tobi.png" alt="Tobi" class="membro-img">
+                            <img src="/assets/img/Tobi.png" alt="Tobi" class="membro-img" loading="lazy">
                             <p class="membro-desc">Usuário do Mangekyō Sharingan e arquiteto do plano supremo.</p>
                         </div>
                         <div class="card-back">
@@ -702,6 +737,10 @@
         </section>
 
 
+        <div class="divisor-secao">
+            <img src="./assets/img/Nuvem.png" alt="" class="divisor-nuvem" aria-hidden="true">
+        </div>
+
         <section id="duplas">
             <div class="duplas-header">
                 <h2>Duplas da Akatsuki</h2>
@@ -712,8 +751,8 @@
                     <div class="dupla-premium-overlay"></div>
                     <div class="dupla-premium-content">
                         <div class="dupla-premium-imgs">
-                            <img src="/assets/img/Itachi.png" alt="Itachi" class="dupla-premium-img">
-                            <img src="/assets/img/Kisame.png" alt="Kisame" class="dupla-premium-img">
+                            <img src="/assets/img/Itachi.png" alt="Itachi" class="dupla-premium-img" loading="lazy">
+                            <img src="/assets/img/Kisame.png" alt="Kisame" class="dupla-premium-img" loading="lazy">
                         </div>
                         <h3>Itachi & Kisame</h3>
                         <span class="dupla-premium-titulo">A Névoa Silenciosa</span>
@@ -724,8 +763,8 @@
                     <div class="dupla-premium-overlay"></div>
                     <div class="dupla-premium-content">
                         <div class="dupla-premium-imgs">
-                            <img src="/assets/img/Hidan.png" alt="Hidan" class="dupla-premium-img">
-                            <img src="/assets/img/Kakuzu.png" alt="Kakuzu" class="dupla-premium-img">
+                            <img src="/assets/img/Hidan.png" alt="Hidan" class="dupla-premium-img" loading="lazy">
+                            <img src="/assets/img/Kakuzu.png" alt="Kakuzu" class="dupla-premium-img" loading="lazy">
                         </div>
                         <h3>Hidan & Kakuzu</h3>
                         <span class="dupla-premium-titulo">Imortais Mercenários</span>
@@ -736,8 +775,8 @@
                     <div class="dupla-premium-overlay"></div>
                     <div class="dupla-premium-content">
                         <div class="dupla-premium-imgs">
-                            <img src="/assets/img/Deidara.png" alt="Deidara" class="dupla-premium-img">
-                            <img src="/assets/img/Sasori.png" alt="Sasori" class="dupla-premium-img">
+                            <img src="/assets/img/Deidara.png" alt="Deidara" class="dupla-premium-img" loading="lazy">
+                            <img src="/assets/img/Sasori.png" alt="Sasori" class="dupla-premium-img" loading="lazy">
                         </div>
                         <h3>Deidara & Sasori</h3>
                         <span class="dupla-premium-titulo">Arte Explosiva</span>
@@ -748,8 +787,8 @@
                     <div class="dupla-premium-overlay"></div>
                     <div class="dupla-premium-content">
                         <div class="dupla-premium-imgs">
-                            <img src="/assets/img/Pain.png" alt="Pain" class="dupla-premium-img">
-                            <img src="/assets/img/Konan.png" alt="Konan" class="dupla-premium-img">
+                            <img src="/assets/img/Pain.png" alt="Pain" class="dupla-premium-img" loading="lazy">
+                            <img src="/assets/img/Konan.png" alt="Konan" class="dupla-premium-img" loading="lazy">
                         </div>
                         <h3>Pain & Konan</h3>
                         <span class="dupla-premium-titulo">Deuses da Chuva</span>
@@ -766,16 +805,10 @@
             </div>
         </section>
 
-        <!-- SEÇÃO MAPA -->
-        <section id="mapa">
-            <div class="mapa-header">
-                <h2>Mapa do Universo Naruto</h2>
-                <p>Explore o vasto mundo onde a Akatsuki opera, desde as vilas ocultas até os campos de batalha lendários.</p>
-            </div>
-            <div class="mapa-container">
-                <img src="./assets/img/mapa-akatsuki.png" alt="Mapa do universo Naruto" class="mapa-imagem">
-            </div>
-        </section>
+
+        <div class="divisor-secao">
+            <img src="./assets/img/Nuvem.png" alt="" class="divisor-nuvem" aria-hidden="true">
+        </div>
 
         <!-- SEÇÃO OBJETIVOS -->
         <section id="objetivos">
@@ -882,7 +915,178 @@
             </div>
         </section>
 
-        <!-- SEÇÃO CURIOSIDADES -->
+
+        <div class="divisor-secao">
+            <img src="./assets/img/Nuvem.png" alt="" class="divisor-nuvem" aria-hidden="true">
+        </div>
+
+        <!-- SEÇÃO RANKING DE PODERES -->
+        <section id="ranking">
+            <div class="ranking-header animar">
+                <h2>Ranking de Poderes</h2>
+                <p>Os ninjas mais poderosos da Akatsuki, classificados por sua capacidade de combate e domínio de técnicas especializadas</p>
+            </div>
+
+            <!-- STATS RÁPIDOS -->
+            <div class="ranking-stats animar">
+                <div class="stat-card">
+                    <i class="fas fa-bolt"></i>
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Membros Elite</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-crown"></i>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Nível S+</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield"></i>
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Imortais</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Poderes Únicos</div>
+                </div>
+            </div>
+
+            <!-- FILTROS -->
+            <div class="ranking-filtros animar">
+                <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="ninjutsu">Ninjutsu</button>
+                <button class="filtro-btn" data-categoria="genjutsu">Genjutsu</button>
+                <button class="filtro-btn" data-categoria="taijutsu">Taijutsu</button>
+                <button class="filtro-btn" data-categoria="kekkei">Kekkei Genkai</button>
+            </div>
+
+            <!-- GRID DE CARDS -->
+            <div class="ranking-grid" id="ranking-grid">
+                <!-- Preenchido via JavaScript -->
+            </div>
+
+            <!-- ANÁLISE GERAL -->
+            <div class="ranking-analise animar">
+                <h3>Análise Geral de Poder</h3>
+                <div class="analise-grid">
+                    <div class="analise-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Poder Máximo</h4>
+                        <p class="analise-valor">100</p>
+                        <p class="analise-desc">Pain (Rinnegan)</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-crown"></i>
+                        <h4>Elite S+</h4>
+                        <p class="analise-valor">3</p>
+                        <p class="analise-desc">Portadores de Ningenkai Fōma</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Poder Médio</h4>
+                        <p class="analise-valor">89%</p>
+                        <p class="analise-desc">Equipe Núcleo da Akatsuki</p>
+                    </div>
+                    <div class="analise-card">
+                        <i class="fas fa-shield"></i>
+                        <h4>Imortalidade</h4>
+                        <p class="analise-valor">44%</p>
+                        <p class="analise-desc">Membros com Habilidades de Reconexão</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="divisor-secao">
+            <img src="./assets/img/Nuvem.png" alt="" class="divisor-nuvem" aria-hidden="true">
+        </div>
+
+        <!-- SEÇÃO QUIZ -->
+        <section id="quiz">
+            <div class="quiz-header animar">
+                <h2>Quiz da Akatsuki</h2>
+                <p>Teste seus conhecimentos sobre a organização mais temida do mundo ninja</p>
+            </div>
+
+            <div class="quiz-container">
+                <!-- Tela inicial -->
+                <div class="quiz-tela" id="quiz-inicio">
+                    <img src="./assets/img/Nuvem.png" alt="Akatsuki" class="quiz-logo">
+                    <h3>Você conhece a Akatsuki?</h3>
+                    <p>8 perguntas — cada resposta certa vale 1 ponto</p>
+                    <button class="quiz-btn-iniciar" id="quiz-iniciar">
+                        <i class="fas fa-play"></i> Iniciar Quiz
+                    </button>
+                </div>
+
+                <!-- Tela de pergunta -->
+                <div class="quiz-tela quiz-oculto" id="quiz-pergunta">
+                    <div class="quiz-progresso">
+                        <span id="quiz-num">1</span>/8
+                        <div class="quiz-barra-progresso">
+                            <div class="quiz-barra-fill" id="quiz-barra-fill"></div>
+                        </div>
+                        <span class="quiz-pontos-label">Pontos: <strong id="quiz-pontos">0</strong></span>
+                    </div>
+                    <h3 id="quiz-texto-pergunta"></h3>
+                    <div class="quiz-opcoes" id="quiz-opcoes"></div>
+                    <p class="quiz-feedback" id="quiz-feedback"></p>
+                </div>
+
+                <!-- Tela de resultado -->
+                <div class="quiz-tela quiz-oculto" id="quiz-resultado">
+                    <div class="quiz-resultado-icone" id="quiz-resultado-icone"></div>
+                    <h3 id="quiz-resultado-titulo"></h3>
+                    <p id="quiz-resultado-msg"></p>
+                    <span class="quiz-pontuacao-final" id="quiz-pontuacao-final"></span>
+                    <button class="quiz-btn-iniciar" id="quiz-reiniciar">
+                        <i class="fas fa-redo"></i> Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO COMPARADOR -->
+        <section id="comparador">
+            <div class="comparador-header animar">
+                <h2>Comparador de Membros</h2>
+                <p>Selecione dois membros e compare seus poderes lado a lado</p>
+            </div>
+
+            <div class="comparador-selects animar">
+                <select class="comparador-select" id="select-1">
+                    <option value="">— Escolha o 1º membro —</option>
+                    <option value="itachi">Itachi Uchiha</option>
+                    <option value="madara">Madara Uchiha</option>
+                    <option value="pain">Pain (Nagato)</option>
+                    <option value="konan">Konan</option>
+                    <option value="kisame">Kisame</option>
+                    <option value="deidara">Deidara</option>
+                    <option value="hidan">Hidan</option>
+                    <option value="kakuzu">Kakuzu</option>
+                    <option value="tobi">Tobi (Obito)</option>
+                </select>
+
+                <span class="comparador-vs">VS</span>
+
+                <select class="comparador-select" id="select-2">
+                    <option value="">— Escolha o 2º membro —</option>
+                    <option value="itachi">Itachi Uchiha</option>
+                    <option value="madara">Madara Uchiha</option>
+                    <option value="pain">Pain (Nagato)</option>
+                    <option value="konan">Konan</option>
+                    <option value="kisame">Kisame</option>
+                    <option value="deidara">Deidara</option>
+                    <option value="hidan">Hidan</option>
+                    <option value="kakuzu">Kakuzu</option>
+                    <option value="tobi">Tobi (Obito)</option>
+                </select>
+            </div>
+
+            <div class="comparador-resultado" id="comparador-resultado"></div>
+        </section>
+
         <section id="curiosidades">
             <div class="curiosidades-header">
                 <h2>Curiosidades da Akatsuki</h2>
@@ -1057,7 +1261,43 @@
 
     </main>
     <footer>
-        <p>&copy; 2026 Eliel. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="./assets/img/Nuvem.png" alt="Akatsuki" class="footer-logo">
+                <p class="footer-slogan">"A dor é o caminho para a paz."</p>
+                <span class="footer-autor">— Pain</span>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#origem">Origem</a></li>
+                    <li><a href="#membros">Membros</a></li>
+                    <li><a href="#duplas">Duplas</a></li>
+                    <li><a href="#ranking">Ranking</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#comparador">Comparador</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <h4>Sobre</h4>
+                <p>Projeto acadêmico desenvolvido por <strong>Eliel</strong>.</p>
+                <p>Conteúdo baseado no universo de Naruto Shippuden.</p>
+                <div class="footer-badges">
+                    <span class="footer-badge">HTML</span>
+                    <span class="footer-badge">CSS</span>
+                    <span class="footer-badge">JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Eliel. Todos os direitos reservados.</p>
+            <p>Naruto &copy; Masashi Kishimoto</p>
+        </div>
     </footer>
 
     <button class="btn-topo" id="btn-topo" aria-label="Voltar ao topo">
@@ -1065,5 +1305,6 @@
     </button>
 
     <script src="./src/js/script.js"></script>
+    <script src="./src/js/ranking.js"></script>
 </body>
 </html>
