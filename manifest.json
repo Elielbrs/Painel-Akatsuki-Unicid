@@ -1,0 +1,34 @@
+{
+  "name": "Akatsuki Wiki - Enciclopédia Naruto",
+  "short_name": "Akatsuki Wiki",
+  "description": "Wiki completa da Akatsuki com membros, poderes, história e curiosidades do universo Naruto",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#c41e3a",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/img/Nuvem-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/img/Nuvem-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["entertainment", "reference"],
+  "screenshots": [
+    {
+      "src": "./assets/img/Nuvem.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

@@ -1,19 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- ========== META TAGS ESSENCIAIS ========== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Akatsuki-wiki</title>
-    <meta name="description" content="Wiki completa da Akatsuki — membros, duplas, origem, poderes e curiosidades da organização mais temida do universo Naruto">
-    <meta name="keywords" content="Akatsuki, Naruto, Itachi, Pain, Madara, wiki, ninja">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="language" content="Portuguese">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="classification" content="Entertainment, Anime, Database">
+    
+    <!-- ========== SEO & DESCRIÇÃO ========== -->
+    <title>Akatsuki Wiki - Enciclopédia Completa da Organização Ninja | Naruto</title>
+    <meta name="description" content="Wiki completa e atualizada da Akatsuki. Conheça membros, duplas, origem, poderes especiais, curiosidades e história da organização mais temida do universo Naruto. Guia abrangente com análises detalhadas.">
+    <meta name="keywords" content="Akatsuki, Naruto, wiki, Pain, Itachi Uchiha, Madara, membros, duplas, poderes, ranking, análise">
     <meta name="author" content="Eliel">
-    <meta property="og:title" content="Akatsuki Wiki">
-    <meta property="og:description" content="Explore o mundo sombrio da Akatsuki — membros, duplas, origem e poderes">
+    <link rel="canonical" href="https://akatsuki-wiki.com.br/">
+    
+    <!-- ========== OPEN GRAPH (COMPARTILHAMENTO SOCIAL) ========== -->
+    <meta property="og:title" content="Akatsuki Wiki - Enciclopédia Completa | Naruto">
+    <meta property="og:description" content="Explore a maior base de dados sobre a Akatsuki. Membros, poderes, história e curiosidades da organização de ninjas renegados do universo Naruto.">
     <meta property="og:image" content="./assets/img/Nuvem.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="./assets/img/Nuvem.png">
+    <meta property="og:url" content="https://akatsuki-wiki.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Akatsuki Wiki">
+    
+    <!-- ========== TWITTER CARD ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akatsuki Wiki - Enciclopédia Naruto">
+    <meta name="twitter:description" content="Wiki completa da Akatsuki com membros, poderes, história e análises detalhadas.">
+    <meta name="twitter:image" content="./assets/img/Nuvem.png">
+    <meta name="twitter:site" content="@akatsuki_wiki">
+    <meta name="twitter:creator" content="@eliel_dev">
+    
+    <!-- ========== MOBILE & COLORS ========== -->
+    <meta name="theme-color" content="#c41e3a">
+    <meta name="msapplication-TileColor" content="#c41e3a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Akatsuki Wiki">
+    
+    <!-- ========== WEB APP MANIFEST & SITEMAP ========== -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="sitemap" type="application/xml" href="./sitemap.xml">
+    
+    <!-- ========== RECURSOS & PERFORMANCE ========== -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- ========== ICONES ========== -->
+    <link rel="icon" type="image/png" href="./assets/img/Nuvem.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./assets/img/Nuvem.png">
+    
+    <!-- ========== JSON-LD STRUCTURED DATA ========== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Akatsuki Wiki",
+        "description": "Wiki completa da Akatsuki com membros, poderes, história e curiosidades do universo Naruto",
+        "url": "https://akatsuki-wiki.com.br",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://akatsuki-wiki.com.br/#membros?busca={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Akatsuki Wiki",
+        "alternateName": "Wiki da Akatsuki",
+        "url": "https://akatsuki-wiki.com.br",
+        "image": "./assets/img/Nuvem.png",
+        "description": "Enciclopédia interativa sobre a Akatsuki do universo Naruto",
+        "sameAs": [
+            "https://twitter.com/akatsuki_wiki",
+            "https://github.com/eliel"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Página Inicial",
+                "item": "https://akatsuki-wiki.com.br"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Origem",
+                "item": "https://akatsuki-wiki.com.br/#origem"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Membros",
+                "item": "https://akatsuki-wiki.com.br/#membros"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Ranking",
+                "item": "https://akatsuki-wiki.com.br/#ranking"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -42,9 +154,9 @@
             <h1>Bem-vindo à Wiki da Akatsuki</h1>
             <div class="container">
                 <div class="faixa">
-                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki" class="home-img">
-                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki" class="home-img">
-                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki" class="home-img">
+                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki - Símbolo da organização ninja" class="home-img" loading="lazy" width="80" height="80">
+                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki - Símbolo da organização ninja" class="home-img" loading="lazy" width="80" height="80">
+                    <img src="./assets/img/Nuvem.png" alt="Logo da Akatsuki - Símbolo da organização ninja" class="home-img" loading="lazy" width="80" height="80">
                 </div>
             </div>
             <p>Explore o mundo sombrio e fascinante da Akatsuki, a organização de ninjas renegados mais temida do universo de Naruto. Descubra os segredos, membros e histórias por trás dessa enigmática facção.</p>
@@ -201,8 +313,8 @@
                                 <h3>Itachi Uchiha</h3>
                                 <span class="membro-titulo">O Gênio Uchiha</span>
                             </div>
-                            <img src="/assets/img/Itachi.png" alt="Itachi" class="membro-img" loading="lazy">
-                            <p class="membro-desc">Mestre em Genjutsu e portador do Mangekyō Sharingan.</p>
+                            <img src="/assets/img/Itachi.png" alt="Itachi Uchiha - Mestre em Genjutsu, membro da Akatsuki" class="membro-img" loading="lazy">
+                            <p class="membro-desc">Mestre do Sharingan e estrategista brilhante, Itachi é conhecido por seu genjutsu devastador e sua presença enigmática na Akatsuki.</p>
                         </div>
                         <div class="card-back">
                             <div class="back-header">
@@ -261,8 +373,7 @@
                                 <h3>Madara Uchiha</h3>
                                 <span class="membro-titulo">O Lendário Guerreiro</span>
                             </div>
-                            <img src="/assets/img/Madara.png" alt="Madara" class="membro-img" loading="lazy">
-                            <p class="membro-desc">Fundador da Folha e o ninja mais poderoso de sua era.</p>
+                            <img src="/assets/img/Madara.png" alt="Madara Uchiha - Lendário guerreiro ninja e fundador da Vila da Folha" class="membro-img" loading="lazy">
                         </div>
                         <div class="card-back">
                             <div class="back-header">
@@ -1304,7 +1415,7 @@
     <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script src="./src/js/script.js"></script>
-    <script src="./src/js/ranking.js"></script>
+    <script src="./src/js/script.js" defer></script>
+    <script src="./src/js/ranking.js" defer></script>
 </body>
 </html>

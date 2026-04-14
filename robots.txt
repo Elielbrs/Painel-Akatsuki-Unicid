@@ -1,0 +1,21 @@
+# Arquivo robots.txt - Akatsuki Wiki
+# =====================================
+
+# Permitir todas as engines de busca
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: *.json$
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Especificações
+Sitemap: https://akatsuki-wiki.com.br/sitemap.xml

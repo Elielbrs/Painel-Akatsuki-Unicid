@@ -394,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
           pergunta: "Qual técnica Itachi usa para prender alguém em uma ilusão de 72 horas?",
           opcoes: ["Amaterasu", "Susano'o", "Tsukuyomi", "Izanagi"],
           correta: 2,
-          explicacao: "O Tsukuyomi é um genjutsu que distorce o tempo — 72 horas ocorrem em 1 segundo real."
+          explicacao: "Tsukuyomi é o genjutsu ocular de Itachi que distorce a percepção do tempo, fazendo 72 horas parecerem ocorrer em um instante."
       },
       {
           pergunta: "De qual vila Deidara é originário?",

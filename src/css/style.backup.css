@@ -1,39 +1,4 @@
-/* ########################################################################################
-   AKATSUKI WIKI - CSS REORGANIZADO POR SEÇÕES
-   ########################################################################################
-   
-   ÍNDICE E ORDEM DE LEITURA (CONFORME MENU DE NAVEGAÇÃO):
-   
-   ✅ 01. RESET, PALETA & VARIÁVEIS - Linhas: 2608-2630
-   ✅ 02. HTML, BODY, MAIN - Estilos base - Linhas: 2631-2815
-   ✅ 03. HEADER / NAVEGAÇÃO - Linhas: 2656-2764
-   ✅ 04. HOME (Hero Section) - Linhas: 2816-3164
-   ✅ 05. ORIGEM - Linhas: 3355-3799
-   ✅ 06. MEMBROS - Busca e Filtros - Linhas: 2099-2169
-   ✅ 07. DUPLAS - Cards Premium - Linhas: 1-197 e 1134-1286
-   ✅ 08. RANKING DE PODERES - Linhas: 1287-1919
-   ✅ 09. QUIZ - Linhas: 1920-2098
-   ✅ 10. COMPARADOR - Linhas: 2170-2331
-   ✅ 11. OBJETIVOS - Linhas: 198-609
-   ✅ 12. CURIOSIDADES - Linhas: 610-1133
-   ✅ 13. FOOTER - Linhas: 2332-2511
-   ✅ 14. DIVISOR DE SEÇÕES - Linhas: 2512-2607
-   ✅ 15. UTILIDADES - Botão Topo - Linhas: 2732-2764
-   ✅ 16. RESPONSIVIDADE - Media Queries para Tablet/Mobile
-   
-   BUSCAR RAPIDAMENTE:
-   - Origem: Procure por ".origem-header"
-   - Membros: Procure por ".membro-card"
-   - Duplas: Procure por ".dupla-premium-card"
-   - Ranking: Procure por ".ranking-header"
-   - Quiz: Procure por ".quiz-header"
-   - Comparador: Procure por ".comparador-header"
-   - Objetivos: Procure por ".objetivo-card"
-   - Curiosidades: Procure por ".curiosidade-card"
-   
-   ######################################################################################## */
-
-/* ==================== DUPLAS PREMIUM (SEÇÃO 07 - Parte 1) ==================== */
+/* ==================== DUPLAS PREMIUM ==================== */
 .duplas-header {
     text-align: center;
     margin: 0 auto 40px auto;
@@ -230,7 +195,7 @@
         font-size: 1.3rem;
     }
 }
-/* ==================== SEÇÃO 11: OBJETIVOS ==================== */
+/* ==================== SEÇÃO OBJETIVOS ==================== */
 #objetivos {
     width: 100%;
     padding: 60px 20px;
@@ -642,7 +607,7 @@
     }
 }
 
-/* ==================== SEÇÃO 12: CURIOSIDADES ==================== */
+/* ==================== SEÇÃO CURIOSIDADES ==================== */
 #curiosidades {
     width: 100%;
     padding: 60px 20px;
@@ -1166,7 +1131,7 @@
     }
 }
 
-/* ==================== SEÇÃO 07: DUPLAS AKATSUKI (Parte 2) ==================== */
+/* ==================== DUPLAS AKATSUKI ==================== */
 .duplas-header {
     text-align: center;
     margin-bottom: 40px;
@@ -1319,7 +1284,7 @@
     }
 }
 
-/* ==================== SEÇÃO 08: RANKING DE PODERES ==================== */
+/* ==================== SEÇÃO RANKING DE PODERES ==================== */
 
 #ranking {
     width: 100%;
@@ -1952,7 +1917,7 @@
     }
 }
 
-/* ==================== SEÇÃO 09: QUIZ ==================== */
+/* ==================== SEÇÃO QUIZ ==================== */
 
 #quiz {
     width: 100%;
@@ -2131,7 +2096,7 @@
     .quiz-tela h3 { font-size: 1.3rem; }
 }
 
-/* ==================== SEÇÃO 06: MEMBROS (Busca e Filtros) ==================== */
+/* ==================== BUSCA DE MEMBROS ==================== */
 
 .busca-container {
     width: 100%;
@@ -2202,7 +2167,7 @@
     font-style: italic;
 }
 
-/* ==================== SEÇÃO 10: COMPARADOR ==================== */
+/* ==================== SEÇÃO COMPARADOR ==================== */
 
 #comparador {
     width: 100%;
@@ -2364,7 +2329,7 @@
     .comp-divisor { display: none; }
 }
 
-/* ==================== SEÇÃO 13: FOOTER ==================== */
+/* ==================== FOOTER RICO ==================== */
 
 footer {
     width: 100%;
@@ -2544,7 +2509,7 @@ footer::before {
     }
 }
 
-/* ==================== SEÇÃO 14: DIVISOR DE SEÇÕES ==================== */
+/* ==================== DIVISOR DE SEÇÕES ==================== */
 .divisor-secao {
     display: flex;
     align-items: center;
@@ -2640,7 +2605,7 @@ footer::before {
 
 /* ════════════════════════════════════════════════════════ */
 
-/* ==================== SEÇÃO 01: PALETA DE CORES AKATSUKI ==================== */
+/* ==================== PALETA DE CORES AKATSUKI ==================== */
 :root {
     /* Cores Principais - Akatsuki */
     --akatsuki-red-primary: #C41E3A;
@@ -2663,7 +2628,7 @@ footer::before {
     --akatsuki-overlay-red: rgba(196, 30, 58, 0.3);
 }
 
-/* ==================== SEÇÃO 02: RESET, HTML, BODY, MAIN ==================== */
+/* ==================== RESET E BASE ==================== */
 * {
     margin: 0;
     padding: 0;
@@ -2688,7 +2653,7 @@ body {
     overflow-x: hidden;
 } 
 
-/* ==================== SEÇÃO 03: HEADER / NAVEGAÇÃO ==================== */
+/* ==================== HEADER / NAVEGAÇÃO ==================== */
 header {
     width: 100%;
 }
@@ -2697,15 +2662,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    background-color: rgba(10, 10, 10, 0.3);
-    backdrop-filter: blur(6px);
+    padding: 20px 40px;
+    background-color: var(--akatsuki-overlay-dark);
     width: 100%;
     height: auto;
     min-height: 8vh;
     z-index: 1000;
     border-bottom: 2px solid var(--akatsuki-red-primary);
-    border: 1px solid rgba(196, 30, 58, 0.3);    color: var(--akatsuki-white);
+    color: var(--akatsuki-white);
     position: fixed;
     top: 0;
     left: 0;
@@ -2765,7 +2729,7 @@ header {
     padding-bottom: 3px;
 }
 
-/* ==================== SEÇÃO 15: BOTÃO VOLTAR AO TOPO ==================== */
+/* ==================== BOTÃO VOLTAR AO TOPO ==================== */
 .btn-topo {
     position: fixed;
     bottom: 30px;
@@ -2849,7 +2813,7 @@ header {
     }
 }
 
-/* ==================== SEÇÃO 04: HOME (Hero/Banner Section) ==================== */
+/* ==================== MAIN CONTENT ==================== */
 main {
     padding-top: 10vh;
     width: 100%;
@@ -3388,7 +3352,7 @@ footer {
     }
 }
 
-/* ==================== SEÇÃO 05: ORIGEM ==================== */
+/* ==================== SEÇÃO ORIGEM ==================== */
 #origem {
     width: 100%;
     padding: 60px 20px;
@@ -3423,7 +3387,7 @@ footer {
     font-style: italic;
 }
 
-/* ==================== SEÇÃO 05: ORIGEM - Timeline ==================== */
+/* ==================== TIMELINE ==================== */
 .timeline-container {
     width: 100%;
     max-width: 900px;
