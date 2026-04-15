@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ════════════════════════════════════════════════════════
   // 2. FILTRO DE MEMBROS
   // ════════════════════════════════════════════════════════
-  window.filtrarMembros = function (categoria) {
+  function filtrarMembros(categoria) {
     cards.forEach((card) => {
       const tipo = card.getAttribute("data-tipo");
       const deveExibir = categoria === "todos" || tipo === categoria;
@@ -70,7 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.getAttribute("onclick")?.includes(categoria),
     );
     if (btnAtivo) btnAtivo.classList.add("ativo");
-  };
+  }
+  
+  // Make filtrarMembros accessible to inline onclick handlers
+  window.filtrarMembros = filtrarMembros;
 
   const btnTodos = [...botoesFiltro].find((btn) =>
     btn.getAttribute("onclick")?.includes("todos"),
@@ -578,12 +581,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById('select-1')?.addEventListener('change', renderComparador);
   document.getElementById('select-2')?.addEventListener('change', renderComparador);
-});
 
-// ════════════════════════════════════════════════════════
-// 7. DUPLAS PREMIUM — Modal de detalhes e animação
-// ════════════════════════════════════════════════════════
-const duplasDetalhes = {
+  // ════════════════════════════════════════════════════════
+  // 7. DUPLAS PREMIUM — Modal de detalhes e animação
+  // ════════════════════════════════════════════════════════
+  const duplasDetalhes = {
   "itachi-kisame": {
     titulo: "Itachi & Kisame",
     subtitulo: "A Névoa Silenciosa",
@@ -653,16 +655,21 @@ document.querySelectorAll(".dupla-premium-btn").forEach((btn) => {
     }
   });
 });
-document
-  .getElementById("dupla-modal-close")
-  .addEventListener("click", function () {
-    document.getElementById("dupla-modal").style.display = "none";
+  document
+    .getElementById("dupla-modal-close")
+    ?.addEventListener("click", function () {
+      document.getElementById("dupla-modal").style.display = "none";
+    });
+  
+  const duplaModal = document.getElementById("dupla-modal");
+  duplaModal?.addEventListener("click", function (e) {
+    if (e.target === this) this.style.display = "none";
   });
-document.getElementById("dupla-modal").addEventListener("click", function (e) {
-  if (e.target === this) this.style.display = "none";
-});
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    document.getElementById("dupla-modal").style.display = "none";
-  }
+  
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      const modal = document.getElementById("dupla-modal");
+      if (modal) modal.style.display = "none";
+    }
+  }, { once: false });
 });
