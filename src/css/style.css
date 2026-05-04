@@ -610,11 +610,17 @@ header {
 .manipulador-section {
     opacity: 0;
 }
+
+.duplas-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin: 0 auto 40px auto;
+    margin-left: 15%;
     width: 100%;
     max-width: 900px;
 }
+
 .duplas-header h2 {
     font-size: 3rem;
     background: linear-gradient(135deg, var(--akatsuki-red-primary), var(--akatsuki-gold));
@@ -3216,6 +3222,7 @@ footer::before {
 /* ════════════════════════════════════════════════════════ */
 /* FIM DO ARQUIVO CSS - Seções organizadas e consolidadas  */
 /* ════════════════════════════════════════════════════════ */
+:root {
     /* Cores Principais - Akatsuki */
     --akatsuki-red-primary: #C41E3A;
     --akatsuki-red-dark: #8B0000;
@@ -3235,6 +3242,7 @@ footer::before {
     /* Transparências */
     --akatsuki-overlay-dark: rgba(0, 0, 0, 0.5);
     --akatsuki-overlay-red: rgba(196, 30, 58, 0.3);
+    --akatsuki-overlay-gold: rgba(212, 175, 55, 0.2);
 }
 
 /* ==================== SEÇÃO 02: RESET, HTML, BODY, MAIN ==================== */
